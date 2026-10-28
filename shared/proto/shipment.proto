@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package shipment;
+
+service ShipmentService {
+  rpc GetShipment (GetShipmentRequest) returns (GetShipmentResponse);
+  rpc UpdateShipmentStatus (UpdateShipmentStatusRequest) returns (UpdateShipmentStatusResponse);
+}
+
+message GetShipmentRequest {
+  int32 oid = 1;
+}
+
+message GetShipmentResponse {
+  int32 sid = 1;
+  int32 oid = 2;
+  string status = 3;
+}
+
+message UpdateShipmentStatusRequest {
+  int32 sid = 1;
+  string status = 2;
+}
+
+message UpdateShipmentStatusResponse {
+  bool success = 1;
+  string message = 2;
+}
