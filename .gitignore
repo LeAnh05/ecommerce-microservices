@@ -24,3 +24,5 @@ Thumbs.db
 # Temporary files
 tmp/
 temp/
+# Docker Compose backup
+docker-compose.backup.yml
